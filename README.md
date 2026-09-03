@@ -1,4 +1,4 @@
-# Vodafone Brand Login
+# Brand Login
 
 Whitelabel theming for the ERPNext / Frappe **login, signup, password-reset,
 message and error pages** — for Frappe **version-15**.
