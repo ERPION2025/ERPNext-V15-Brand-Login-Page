@@ -1,4 +1,4 @@
-# Brand Login
+# Brand Login ERPNext V15
 
 Whitelabel theming for the ERPNext / Frappe **login, signup, password-reset,
 message and error pages** — for Frappe **version-15**.
@@ -115,7 +115,7 @@ local folder, so:
    the equivalent of `get-app` + a fresh build on Frappe Cloud's
    infrastructure).
 4. On each **Site** using that Bench, go to **Site → Apps → Install**
-   and install `Vodafone Brand Login`. This triggers `after_install`
+   and install `Brand Login ERPNext V15`. This triggers `after_install`
    exactly as in local dev.
 5. If the app is added to a Bench that's already running sites with
    existing Company records, also run **Site → Console/Bench →

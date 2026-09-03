@@ -1,5 +1,5 @@
 app_name = "vodafone_brand_login"
-app_title = "Vodafone Brand Login"
+app_title = "Brand Login ERPNext V15"
 app_publisher = "Pranav Dixit / ERPion Technologies LLP"
 app_description = (
     "Whitelabel theming for ERPNext/Frappe login, signup, password-reset, "
