@@ -1,0 +1,178 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:brand_key",
+ "creation": "2026-09-03 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "brand_key",
+  "business_name",
+  "company",
+  "column_break_3",
+  "tagline",
+  "section_break_flags",
+  "enabled",
+  "is_default",
+  "column_break_flags",
+  "show_in_switcher",
+  "sort_order",
+  "section_break_colors",
+  "primary_color",
+  "secondary_color",
+  "column_break_colors",
+  "accent_text_color",
+  "section_break_media",
+  "logo",
+  "column_break_media",
+  "favicon"
+ ],
+ "fields": [
+  {
+   "description": "Used in the ?brand= link and the shareable /b/<brand_key> URL. Lowercase letters, numbers and hyphens only, e.g. acme-salon",
+   "fieldname": "brand_key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Brand Key (URL Slug)",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "business_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Business Name",
+   "reqd": 1
+  },
+  {
+   "description": "Optional. Links this brand to its ERPNext Company master. Leave blank for the umbrella Vodafone default brand.",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tagline",
+   "fieldtype": "Data",
+   "label": "Tagline (optional, shown under the business name)"
+  },
+  {
+   "fieldname": "section_break_flags",
+   "fieldtype": "Section Break",
+   "label": "Behaviour"
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enabled"
+  },
+  {
+   "description": "Used when no brand is selected/matched. Only one record should be marked default - this is enforced on save.",
+   "fieldname": "is_default",
+   "fieldtype": "Check",
+   "label": "Is Default (Fallback) Brand"
+  },
+  {
+   "fieldname": "column_break_flags",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "description": "Untick to allow a direct /login?brand= or /b/ link to still work while hiding this business from the public 'select your business' dropdown.",
+   "fieldname": "show_in_switcher",
+   "fieldtype": "Check",
+   "label": "Show In Business Switcher"
+  },
+  {
+   "default": "0",
+   "fieldname": "sort_order",
+   "fieldtype": "Int",
+   "label": "Sort Order"
+  },
+  {
+   "fieldname": "section_break_colors",
+   "fieldtype": "Section Break",
+   "label": "Brand Colors"
+  },
+  {
+   "default": "#E60000",
+   "fieldname": "primary_color",
+   "fieldtype": "Color",
+   "label": "Primary Color",
+   "reqd": 1
+  },
+  {
+   "default": "#FFFFFF",
+   "fieldname": "secondary_color",
+   "fieldtype": "Color",
+   "label": "Secondary Color",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_colors",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "#FFFFFF",
+   "description": "Text/icon color used on top of the primary color background (e.g. the Login button label).",
+   "fieldname": "accent_text_color",
+   "fieldtype": "Color",
+   "label": "Accent Text Color",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_media",
+   "fieldtype": "Section Break",
+   "label": "Logo & Favicon"
+  },
+  {
+   "fieldname": "logo",
+   "fieldtype": "Attach Image",
+   "label": "Logo"
+  },
+  {
+   "fieldname": "column_break_media",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "favicon",
+   "fieldtype": "Attach Image",
+   "label": "Favicon"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "links": [],
+ "modified": "2026-09-03 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Brand Login",
+ "name": "Brand Login Settings",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

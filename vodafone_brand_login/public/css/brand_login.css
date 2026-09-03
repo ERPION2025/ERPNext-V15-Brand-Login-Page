@@ -1,0 +1,140 @@
+/*
+ * Vodafone Brand Login - theming stylesheet
+ * Loaded on every website (www) page via the web_include_css hook in
+ * hooks.py. This never touches Desk CSS.
+ *
+ * Strategy: CSS custom properties, set at runtime by brand_login.js
+ * from the resolved Brand Login Settings record. Sensible Vodafone
+ * red/white defaults are baked in below so there is no flash of an
+ * unstyled page before the JS API call resolves.
+ */
+
+:root {
+	--vbl-primary: #e60000;
+	--vbl-secondary: #ffffff;
+	--vbl-accent-text: #ffffff;
+	--vbl-radius: 10px;
+}
+
+/* ----------------------------------------------------------------
+   Only activate the themed look on the pages this app is meant for.
+   body[data-vbl-active] is set by brand_login.js once it confirms
+   we're on an auth/error page - avoids leaking styling onto ordinary
+   logged-in website/portal pages.
+   ---------------------------------------------------------------- */
+body[data-vbl-active="1"] {
+	background: linear-gradient(180deg, var(--vbl-secondary) 0%, #f5f5f5 100%);
+}
+
+body[data-vbl-active="1"] .page-card,
+body[data-vbl-active="1"] .page-card-container .page-card,
+body[data-vbl-active="1"] .for-login,
+body[data-vbl-active="1"] .signup-form-wrapper {
+	border-top: 4px solid var(--vbl-primary);
+	border-radius: var(--vbl-radius);
+	box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+body[data-vbl-active="1"] .page-card-head,
+body[data-vbl-active="1"] .brand-card .card-header {
+	color: var(--vbl-primary);
+	font-weight: 600;
+}
+
+/* Primary buttons: Login, Send Login Link, Update Password, Sign Up, OTP submit */
+body[data-vbl-active="1"] .btn-primary,
+body[data-vbl-active="1"] .btn-login,
+body[data-vbl-active="1"] button[type="submit"] {
+	background-color: var(--vbl-primary) !important;
+	border-color: var(--vbl-primary) !important;
+	color: var(--vbl-accent-text) !important;
+}
+
+body[data-vbl-active="1"] .btn-primary:hover,
+body[data-vbl-active="1"] .btn-login:hover,
+body[data-vbl-active="1"] button[type="submit"]:hover {
+	filter: brightness(0.92);
+}
+
+/* Links: Forgot Password, Sign Up, Login with Email Link toggle */
+body[data-vbl-active="1"] a,
+body[data-vbl-active="1"] .for-forgot a,
+body[data-vbl-active="1"] .login-content a {
+	color: var(--vbl-primary);
+}
+
+/* Input focus ring */
+body[data-vbl-active="1"] .form-control:focus,
+body[data-vbl-active="1"] input:focus {
+	border-color: var(--vbl-primary);
+	box-shadow: 0 0 0 0.15rem color-mix(in srgb, var(--vbl-primary) 25%, transparent);
+}
+
+/* ---------------- Business switcher (injected by JS) ---------------- */
+.vbl-switcher {
+	max-width: 360px;
+	margin: 0 auto 1rem auto;
+}
+
+.vbl-switcher select {
+	width: 100%;
+	padding: 0.5rem 0.75rem;
+	border-radius: 6px;
+	border: 1px solid #d1d1d1;
+	background: #fff;
+	font-size: 0.9rem;
+}
+
+.vbl-switcher label {
+	display: block;
+	font-size: 0.75rem;
+	color: #666;
+	margin-bottom: 0.25rem;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+/* ---------------- Injected logo + business name header ---------------- */
+.vbl-header {
+	text-align: center;
+	margin-bottom: 1.25rem;
+}
+
+.vbl-header img.vbl-logo {
+	max-height: 56px;
+	max-width: 220px;
+	margin-bottom: 0.5rem;
+	object-fit: contain;
+}
+
+.vbl-header .vbl-business-name {
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--vbl-primary);
+}
+
+.vbl-header .vbl-tagline {
+	font-size: 0.85rem;
+	color: #777;
+	margin-top: 0.15rem;
+}
+
+/* ---------------- Co-brand footer (injected by JS) ---------------- */
+.vbl-footer {
+	text-align: center;
+	margin-top: 1.5rem;
+	font-size: 0.75rem;
+	color: #999;
+}
+
+.vbl-footer img {
+	max-height: 18px;
+	vertical-align: middle;
+	margin-left: 0.35rem;
+	opacity: 0.8;
+}
+
+/* ---------------- Error pages (404 / 429 / generic) ---------------- */
+body[data-vbl-active="1"][data-vbl-error="1"] .vbl-header {
+	margin-top: 3rem;
+}

@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "creation": "2026-09-03 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "show_business_switcher",
+  "cookie_expiry_days",
+  "section_break_footer",
+  "footer_text",
+  "footer_logo",
+  "section_break_fallback",
+  "fallback_business_name",
+  "fallback_primary_color",
+  "column_break_fallback",
+  "fallback_secondary_color",
+  "fallback_accent_text_color"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "description": "Shows the 'Select your business' dropdown on the login page, populated from enabled Brand Login Settings records.",
+   "fieldname": "show_business_switcher",
+   "fieldtype": "Check",
+   "label": "Show Business Switcher On Login Page"
+  },
+  {
+   "default": "30",
+   "description": "How long a visitor's business selection is remembered (via cookie) across the login, reset-password and message pages.",
+   "fieldname": "cookie_expiry_days",
+   "fieldtype": "Int",
+   "label": "Remember Selection For (Days)"
+  },
+  {
+   "fieldname": "section_break_footer",
+   "fieldtype": "Section Break",
+   "label": "Vodafone Co-brand Footer"
+  },
+  {
+   "default": "Powered by Vodafone X ERPNext",
+   "fieldname": "footer_text",
+   "fieldtype": "Small Text",
+   "label": "Footer Text"
+  },
+  {
+   "fieldname": "footer_logo",
+   "fieldtype": "Attach Image",
+   "label": "Footer Logo"
+  },
+  {
+   "fieldname": "section_break_fallback",
+   "fieldtype": "Section Break",
+   "label": "Ultimate Fallback Brand (used if no Brand Login Settings exist at all)"
+  },
+  {
+   "default": "Vodafone",
+   "fieldname": "fallback_business_name",
+   "fieldtype": "Data",
+   "label": "Fallback Business Name"
+  },
+  {
+   "default": "#E60000",
+   "fieldname": "fallback_primary_color",
+   "fieldtype": "Color",
+   "label": "Fallback Primary Color"
+  },
+  {
+   "fieldname": "column_break_fallback",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "#FFFFFF",
+   "fieldname": "fallback_secondary_color",
+   "fieldtype": "Color",
+   "label": "Fallback Secondary Color"
+  },
+  {
+   "default": "#FFFFFF",
+   "fieldname": "fallback_accent_text_color",
+   "fieldtype": "Color",
+   "label": "Fallback Accent Text Color"
+  }
+ ],
+ "index_web_pages_for_search": 0,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-09-03 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Brand Login",
+ "name": "Brand Login Global Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,23 @@
+[project]
+name = "vodafone_brand_login"
+authors = [
+    { name = "Pranav Dixit", email = "pranav@erpion.in" }
+]
+description = "Whitelabel theming layer for ERPNext / Frappe login, signup, password-reset and error pages. Brand colors, logo and business name are driven by Company-linked 'Brand Login Settings' records, with a business switcher for multi-company sites."
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    # no extra Python dependencies beyond frappe itself
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.bench.dev-dependencies]
+# add dev-only dependencies here
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
